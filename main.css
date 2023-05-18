@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+body , html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.sky {
+    position: relative;
+    height: 40%;
+    background-color: cornflowerblue;
+}
+.sky::before {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    width: 377px;
+    height: 245px;
+    background-image: url("./imges/cloud-146253.png");
+    content: "";
+    z-index: 2;
+    animation: sky 50s linear infinite;
+}
+.sky::after {
+    position: absolute;
+    top: 300px;
+    right: -30px;
+    width: 100px;
+    height: 70px;
+    background-image: url("./imges/one.png");
+    background-repeat: no-repeat;
+    background-size: 100px 70px;
+    content: "";
+    z-index: 2;
+    animation: birts 15s ease infinite;
+}
+.land {
+    height: 20%;
+    background-color: darkgreen;
+}
+.land::before {
+    position: absolute;
+    top: 210px;
+    right: 300px;
+    width: 377px;
+    height: 245px;
+    background-image: url("./imges/treee.png");
+    background-size: 300px 200px;
+    background-repeat: no-repeat;
+    content: "";
+    z-index: 2;
+}
+
+.road {  
+    position: relative;
+    height: 40%;
+    background-color: rgb(101, 97, 97);
+}
+.road::before {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 500px;
+    height: 400px;
+    background-image: url("./imges/carred.png");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    content: "";
+    animation: redcar 5s linear infinite;
+
+}
+.road::after {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 500px;
+    height: 200px;
+    background-image: url("./imges/carone.png");
+    background-repeat: no-repeat;
+    background-size: 500px 200px;
+    content: "";
+    animation: redone 4s linear infinite ;
+
+}
+.line {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    border: 5px dashed white;
+}
+@keyframes redcar {
+    0% {
+        transform: translateX(-550px);
+    }
+    100% {
+        transform: translateX(1600px);
+    }
+}
+@keyframes redone {
+    0% {
+        transform: translateX(-550px);
+    }
+    100% {
+        transform: translateX(1600px);
+    }
+}
+@keyframes sky {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(1400px);
+    }
+}
+@keyframes birts {
+    0% {
+        right: -300px;
+    }
+    20% {
+        top: 300px;
+    }
+    25% {
+        top: 100px;
+    }
+    40% {
+        top: 200px;
+    }
+    100% {
+        right: 100%;
+    }
+}
